@@ -7,6 +7,7 @@ resource "aws_instance" "grafana" {
    subnet_id = "${var.private_subnet_id}"
    vpc_security_group_ids = ["${var.private_security_group_id}"]
    associate_public_ip_address = false
+   private_ip = "${var.private_ip_grafana}"
    source_dest_check = false
    tags = {
     Name = "Grafana"
