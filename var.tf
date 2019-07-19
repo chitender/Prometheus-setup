@@ -48,3 +48,21 @@ variable "public_subnet_id" {
     type	 = string
     default	 = "subnet-0d7a18da10322b14b"
 }
+
+variable "private_ip_nginx" {
+    description = "security group Id for application services"
+    type        = string
+    default     = "PRIVATE_IP_NGINX"
+}
+
+variable "private_ip_grafana" {
+    description = "security group Id for application services"
+    type        = string
+    default     = "PRIVATE_IP_GRAFANA"
+}
+
+variable "private_ip_prometheus" {
+    description = "security group Id for application services"
+    type        = string
+    default     = "PRIVATE_IP_PROMETHEUS"
+}

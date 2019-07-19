@@ -7,6 +7,7 @@ resource "aws_instance" "nginx" {
    subnet_id = "${var.public_subnet_id}"
    vpc_security_group_ids = ["${var.public_security_group_id}"]
    associate_public_ip_address = true
+   private_ip = "${var.private_ip_nginx}"
    source_dest_check = false
    tags = {
     Name = "Prometheus-Nginx"
